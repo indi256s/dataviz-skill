@@ -1,0 +1,52 @@
+{
+  "skill_name": "dataviz",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build me a sprint metrics dashboard with KPI cards showing completion rate, cycle time, and DSHB score, plus a trend line chart showing these metrics over the last 6 sprints. Use ECharts. Dark theme. Use sample data — I just want to see the structure and design.",
+      "expected_output": "An HTML file or code with ECharts charts, KPI cards, dark theme styling matching Linear aesthetic, insight-driven chart titles, and proper axis labels",
+      "files": [],
+      "expectations": [
+        "Uses ECharts library (echarts.init or import echarts)",
+        "Registers or applies a dark theme with backgrounds near #0d1117",
+        "Has KPI cards with big numbers and delta indicators",
+        "Chart title is a conclusion/insight, not a generic description",
+        "Y-axis starts at zero for any bar charts present",
+        "Uses the Linear dark color palette (colors like #58a6ff, #3fb950, etc.)",
+        "Includes tooltips with formatted values",
+        "Has responsive container sizing"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I have data showing bug counts by team for 8 teams and I want to make a pie chart to compare them. Can you build this in ECharts? Teams: Mobile (45), Web (38), Platform (31), Infra (28), iOS (22), Android (19), Data (15), QA (12).",
+      "expected_output": "Should push back on pie chart and offer horizontal bar chart instead. Output should be an ECharts horizontal bar config with the data, dark theme, and direct labels",
+      "files": [],
+      "expectations": [
+        "Pushes back on pie chart or explains why bar is better",
+        "Produces a horizontal bar chart instead of pie",
+        "Uses direct labels on bars (not just legend)",
+        "Chart title is insight-driven (e.g. mentions Mobile leading)",
+        "Y-axis categories are sorted by value (ranking)",
+        "Dark theme colors applied",
+        "Includes subtitle with context"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Create a team health overview table like Linear's initiatives view — rows for 6 teams, columns for target date, health status badge (On track/At risk/Off track), progress fraction (done/total), active items with colored dots, and a tiny sparkline showing recent velocity trend. Make it a self-contained HTML file with ECharts for the sparklines. Use sample data.",
+      "expected_output": "A self-contained HTML file with a dark-themed data table matching Linear's aesthetic, status badges with semantic colors, and inline ECharts sparklines",
+      "files": [],
+      "expectations": [
+        "Produces a self-contained HTML file",
+        "Has a data table with team rows",
+        "Status badges use semantic colors (green/yellow/red)",
+        "Includes inline sparklines (ECharts or SVG)",
+        "Dark background matching Linear aesthetic (#0d1117 range)",
+        "Progress shown as fraction (e.g. 23/102)",
+        "Uses Inter or system font stack",
+        "Table has proper spacing and subtle borders"
+      ]
+    }
+  ]
+}
