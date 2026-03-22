@@ -36,6 +36,24 @@ Hard rules, not guidelines.
 | **Word cloud** | Not visualization, it's decoration | Ranked bar chart |
 | **Stacked bar (>4 categories)** | Only bottom category is comparable | Small multiples |
 
+## Diagram Types (structural, not quantitative)
+
+| Diagram Type | When to Use | Tool |
+|-------------|-------------|------|
+| **Flowchart** | Decision trees, processes, approval flows | D2 or CSS/HTML |
+| **Sequence diagram** | API calls, auth flows, time-ordered interactions | D2 |
+| **Architecture / C4** | System topology, service boundaries | D2 (tala) or CSS/HTML |
+| **ERD** | Database schema, data models | D2 (elk, sql_table) |
+| **Class diagram** | OOP structure, type hierarchies | D2 |
+| **User flow** | Onboarding, checkout, user journeys | D2 or CSS/HTML |
+| **Org chart** | Team structure, reporting lines | D2 or CSS/HTML |
+| **Pipeline** | CI/CD stages, deployment flow | CSS/HTML |
+| **Data-enriched architecture** | System diagram with health metrics per node | CSS/HTML + ECharts |
+| **Data-enriched pipeline** | Pipeline with throughput/conversion per stage | CSS/HTML + ECharts |
+| **Data-enriched org chart** | Team structure with velocity per person | CSS/HTML + ECharts |
+
+Full templates in `references/diagrams-guide.md`.
+
 ## Decision Tree
 
 ```
@@ -50,5 +68,9 @@ What are you showing?
 ├─ Correlation → Scatter plot
 ├─ Flow/connection → Sankey or graph
 ├─ Geographic → Choropleth or bubble map
-└─ Single KPI → Big number + sparkline + delta
+├─ Single KPI → Big number + sparkline + delta
+├─ Structure/flow/process → Diagram (see diagram types above)
+│  ├─ Standalone file for docs → D2
+│  ├─ Embedded in web app → CSS/HTML
+│  └─ Structure + live metrics → Data-enriched diagram (CSS/HTML + ECharts)
 ```

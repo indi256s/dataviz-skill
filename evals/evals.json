@@ -47,6 +47,55 @@
         "Uses Inter or system font stack",
         "Table has proper spacing and subtle borders"
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Create a D2 diagram showing the architecture of a microservices app: an API Gateway connects to 3 services (Users, Orders, Payments), each with their own database. The Orders service also connects to a Redis cache and a message queue that the Payments service reads from. Save as a .d2 file.",
+      "expected_output": "A .d2 file with proper D2 syntax, containers for service boundaries, correct shapes (cylinder for databases, queue for message queue), labeled connections, and appropriate layout engine",
+      "files": [],
+      "expectations": [
+        "Valid D2 syntax (compiles without errors)",
+        "Uses containers/groups for service boundaries",
+        "Databases use cylinder shape",
+        "Message queue uses queue shape or is clearly labeled",
+        "All connections have labels describing what flows through them",
+        "Uses tala or dagre layout engine",
+        "Has a direction declaration (down or right)",
+        "Includes styling classes or inline styles for visual hierarchy"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "I need an architecture health dashboard for my production system. Show 5 services (Web App, API Gateway, Auth Service, Database, Cache) arranged as an architecture diagram but with live metrics on each node — latency (ms), error rate (%), and a tiny sparkline showing request volume trend over the last 12 hours. Use the Linear dark theme. Self-contained HTML with ECharts for sparklines. Use sample data.",
+      "expected_output": "A self-contained HTML file showing an architecture diagram where each service node is a card with metrics (latency, error rate) and an inline ECharts sparkline. Nodes are visually connected. Dark theme. This is the data-enriched diagram pattern.",
+      "files": [],
+      "expectations": [
+        "Produces a self-contained HTML file",
+        "Shows services arranged as an architecture diagram (not just a list)",
+        "Each service node contains quantitative metrics (latency and error rate numbers)",
+        "Includes ECharts sparklines inside the service nodes",
+        "Service health is visually encoded (border color or status indicator changes based on metrics)",
+        "Dark background matching Linear aesthetic (#0d1117 range)",
+        "Services are visually connected (arrows, lines, or flow indicators)",
+        "Uses Inter or system font stack with tabular figures for numbers",
+        "Responsive layout"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Create a CI/CD deployment pipeline visualization as a self-contained HTML page. Show 5 stages: Build, Lint, Test, Staging Deploy, Production Deploy. The Build and Lint stages are complete, Test is currently running, and the deploy stages are pending. Show timing for each completed stage (Build: 45s, Lint: 12s) and a progress indicator for the running stage. Dark theme matching Linear.",
+      "expected_output": "A self-contained HTML file with a horizontal pipeline visualization showing stage progression with status indicators, timing data, and the Linear dark theme",
+      "files": [],
+      "expectations": [
+        "Produces a self-contained HTML file",
+        "Shows a horizontal or clear sequential pipeline flow",
+        "Completed stages visually distinct from pending/running (color coding)",
+        "Running stage has a visual indicator (animation, pulse, or progress bar)",
+        "Timing data shown on completed stages",
+        "Dark background matching Linear aesthetic",
+        "Uses semantic colors (green for complete, blue for running, gray for pending)",
+        "Stages are connected visually (lines, arrows, or progress bar)"
+      ]
     }
   ]
 }
